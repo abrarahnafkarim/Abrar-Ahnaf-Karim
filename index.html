@@ -18,19 +18,21 @@
   <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <a class="navbar-brand" href="#">Home</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#about">About me<span class="sr-only"></a>
+        <a class="nav-link" href="#about">About me<span class="sr-only"></span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#Achievements">Achievements</a>
       </li>
+    </ul>
+  </div>
 </nav>
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -88,7 +90,7 @@
   </div>
   <div class="card">
     <img class="card-img-top" src="sopon_miaji.jpg" alt="Card image cap">
-    <di class="card-body">
+    <div class="card-body">
       <h5 class="card-title">Presentation in front of Mayor</h5>
       <p class="card-text">Mayor of Feni pouroshova called us to present our robot in front of him.</p>
       <p class="card-text"><small class="text-muted"></small></p>
@@ -97,7 +99,7 @@
 </div>
 </div>
 </div>
-<div id="Achievements"class="container">
+<div id="Achievements" class="container">
   <div class="card">
   <div class="card-header">
     
@@ -431,6 +433,29 @@
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<!-- Custom JavaScript to initialize carousel -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize the carousel
+  var myCarousel = document.querySelector('#carouselExampleIndicators');
+  if (myCarousel) {
+    var carousel = new bootstrap.Carousel(myCarousel, {
+      interval: 3000,
+      ride: 'carousel'
+    });
+    
+    // Start the carousel
+    carousel.cycle();
+    
+    console.log('Carousel initialized and started');
+  }
+});
+</script>
+
  </body>
  </html>
 
